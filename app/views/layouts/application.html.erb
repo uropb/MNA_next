@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MNA</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+      <header>
+
+        <div id="header">
+            <div class="logo-img">
+                <%=image_tag('logo.png', :alt => "Добавить") %>
+            </div>
+        </div>
+
+
+      </header>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+
+          <ul class="nav nav-tabs nav-stacked">
+            <li><a href="/">Об Академии</a></li>
+            <li><a href="/ASC">Центр Поддержки Академий</a></li>
+            <li><a href="/consist">Состав Академии</a></li>
+            <li><a href="/program">Программа</a></li>
+            <li><a href="/how_to_become">Как стать Локальной Академией Cisco</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+          </ul>
+
+        </div>
+        <div class="span10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+
+
+  <footer>
+    <div class="main">
+      <p style="text-align:center"><small>© 2014 "МАТИ" - Российский Государственный Технологический Университет - Региональная Академия Cisco. Москва<br>
+        109240, г. Москва, Берниковская Набережная 14, тел +7(495) 9153580 , e-mail: <a href="мuraviyov@testing.ru">мuraviyov@testing.ru</a></small></p>
+    </div>
+  </footer>
+
+  </div>
+
+</body>
+</html>

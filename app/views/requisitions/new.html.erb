@@ -1,0 +1,79 @@
+<%= form_for(@requisition) do |f| %>
+    <% if @requisition.errors.any? %>
+        <div class="alert alert-error">
+          <h1>Внимание!</h1>
+
+          <ul>
+            <% @requisition.errors.to_a.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="span7" id="form6">
+      <h2>Оставить заявку</h2>
+      <br>
+      <div class="span7" id="form3">
+        <div class="span7" id="form4">
+          <h5>Название организации</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.text_field :name_organization %> <br>
+        </div>
+      </div>
+
+      <div class="span7" id="form3">
+        <div class="span7" id="form4">
+          <h5>Контактное лицо</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.text_field :contact_person %> <br>
+        </div>
+      </div>
+
+      <div class="span7" id="form3">
+        <div class="span7" id="form4">
+          <h5>Email</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.text_field :email %>
+        </div>
+      </div>
+
+      <div class="span7" id="form3">
+        <div class="span7" id="form4">
+          <h5>Телефон</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.text_field :phone_number %>
+        </div>
+      </div>
+
+      <div class="span7" id="form3">
+        <div class="span7" id="form4">
+          <h5>Комментарий</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.text_field :comment %>
+        </div>
+      </div>
+
+      <div class="span7" id="doc">
+        <div class="span7" id="form4">
+          <h5>Прикрепить документ:</h5>
+        </div>
+        <div class="span7" id="form5">
+          <%= f.file_field :doc %>
+        </div>
+      </div>
+
+      <br>
+
+      <%= f.submit 'Оставить заявку', class: 'btn btn-info btn-large', id:"btn1"  %>
+
+
+    </div>
+
+<% end %>
+
